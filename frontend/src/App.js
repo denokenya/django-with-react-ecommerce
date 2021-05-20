@@ -3,7 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Product from './pages/Product';
-import Cart from './pages/Cart'
+import Cart from './pages/Cart';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -15,8 +17,10 @@ function App() {
       <main className='py-5 '>
         <Container>
           <Route path='/' component={Home} exact />
-          <Route path='/product/:id' component={Product}  />
-          <Route path='/cart/:id?' component={Cart}  />
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
+          <Route path='/product/:id' component={Product} />
+          <Route path='/cart/:id?' component={Cart} />
         </Container>
       </main>
       <Footer />
