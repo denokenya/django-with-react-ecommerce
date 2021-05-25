@@ -6,7 +6,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { getUserDetails, updateUserProfile } from '../actions/user';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/user';
-// import { listMyOrders } from '../actions/order';
+import { listMyOrders } from '../actions/order';
 
 const Profile = ({ history }) => {
   const [name, setName] = useState('');
@@ -26,8 +26,8 @@ const Profile = ({ history }) => {
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
   const { success } = userUpdateProfile;
 
-//   const orderListMy = useSelector((state) => state.orderListMy);
-//   const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
+  const orderListMy = useSelector((state) => state.orderListMy);
+  const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
 
   useEffect(() => {
     if (!userInfo) {
@@ -36,7 +36,7 @@ const Profile = ({ history }) => {
       if (!user || !user.name || success || userInfo._id !== user._id) {
         dispatch({ type: USER_UPDATE_PROFILE_RESET });
         dispatch(getUserDetails('profile'));
-        // dispatch(listMyOrders());
+        dispatch(listMyOrders());
       } else {
         setName(user.name);
         setEmail(user.email);
@@ -118,7 +118,7 @@ const Profile = ({ history }) => {
         </Form>
       </Col>
 
-      {/* <Col md={9}>
+      <Col md={9}>
         <h2>My Orders</h2>
         {loadingOrders ? (
           <Loader />
@@ -142,7 +142,7 @@ const Profile = ({ history }) => {
                 <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>${order.totalPrice}</td>
+                  <td>Kes. {order.totalPrice}</td>
                   <td>
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)
@@ -160,9 +160,9 @@ const Profile = ({ history }) => {
             </tbody>
           </Table>
         )}
-      </Col> */}
+      </Col>
     </Row>
   );
-}
+};
 
 export default Profile;

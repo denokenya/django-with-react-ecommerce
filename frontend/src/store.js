@@ -19,13 +19,26 @@ import {
   orderList,
   orderDeliver,
 } from './reducers/order';
-import { productList, productDetails } from './reducers/product';
+import {
+  productList,
+  productDetails,
+  productDelete,
+  productCreate,
+  productUpdate,
+  productReviewCreate,
+  productTopRated,
+} from './reducers/product';
 import { cart } from './reducers/cart';
 
 const reducer = combineReducers({
   // Products
   productList,
   productDetails,
+  productDelete,
+  productCreate,
+  productUpdate,
+  productReviewCreate,
+  productTopRated,
 
   // Cart
   cart,
