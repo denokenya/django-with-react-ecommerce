@@ -8,6 +8,8 @@ import Shipping from './pages/Shipping';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Payment from './pages/Payment';
+import PlaceOrder from './pages/PlaceOrder';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -23,6 +25,8 @@ function App() {
           <Route path='/register' component={Register} />
           <Route path='/profile' component={Profile} />
           <Route path='/shipping' component={Shipping} />
+          <Route path='/payment' component={Payment} />
+          <Route path='/placeorder' component={PlaceOrder} />
           <Route path='/product/:id' component={Product} />
           <Route path='/cart/:id?' component={Cart} />
         </Container>
