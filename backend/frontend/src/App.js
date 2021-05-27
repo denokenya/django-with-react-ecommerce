@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Product from './pages/Product';
@@ -22,7 +22,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <main className='py-5 '>
         <Container>
@@ -47,7 +47,7 @@ function App() {
         </Container>
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

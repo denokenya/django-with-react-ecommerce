@@ -21,7 +21,6 @@ const Home = ({ history }) => {
 
   return (
     <div>
-      <ProductCarousel />
       {!keyword && <ProductCarousel />}
 
       <h1>Latest Products</h1>
