@@ -105,7 +105,7 @@ function ProductScreen({ match, history }) {
                     <Row>
                       <Col>Price:</Col>
                       <Col>
-                        <strong>${product.price}</strong>
+                        <strong>Kes. {product.price}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -142,14 +142,16 @@ function ProductScreen({ match, history }) {
                   )}
 
                   <ListGroup.Item>
-                    <Button
-                      onClick={addToCartHandler}
-                      className='btn-block'
-                      disabled={product.countInStock === 0}
-                      type='button'
-                    >
-                      Add to Cart
-                    </Button>
+                    <Row>
+                      <Button
+                        onClick={addToCartHandler}
+                        block
+                        disabled={product.countInStock === 0}
+                        type='button'
+                      >
+                        Add to Cart
+                      </Button>
+                    </Row>
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
@@ -202,7 +204,7 @@ function ProductScreen({ match, history }) {
                         </Form.Control>
                       </Form.Group>
 
-                      <Form.Group controlId='comment'>
+                      <Form.Group controlId='comment' className='mb-3'>
                         <Form.Label>Review</Form.Label>
                         <Form.Control
                           as='textarea'

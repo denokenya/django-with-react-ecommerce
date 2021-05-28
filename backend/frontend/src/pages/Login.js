@@ -46,7 +46,7 @@ const Login = ({ location, history }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='password'>
+        <Form.Group controlId='password' className='mb-3'>
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'

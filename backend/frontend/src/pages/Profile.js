@@ -102,7 +102,7 @@ const Profile = ({ history }) => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId='passwordConfirm'>
+          <Form.Group controlId='passwordConfirm' className='mb-3'>
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
               type='password'

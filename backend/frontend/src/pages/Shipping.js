@@ -60,7 +60,7 @@ function Shipping({ history }) {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='country'>
+        <Form.Group controlId='country' className='mb-3'>
           <Form.Label>Country</Form.Label>
           <Form.Control
             required

@@ -36,6 +36,7 @@ const Payment = ({ history }) => {
               label='PayPal or Credit Card'
               id='paypal'
               name='paymentMethod'
+              className='mb-3'
               checked
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>

@@ -82,7 +82,7 @@ const UserEdit = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='isadmin'>
+            <Form.Group controlId='isadmin' className='mb-3'>
               <Form.Check
                 type='checkbox'
                 label='Is Admin'
