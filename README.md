@@ -1,7 +1,6 @@
 # Django & REACT Ecommerce with the following functionalities
 
-Markup : ![picture alt](pic.png)
-
+![picture alt](pic.png)
 
 * Full featured shopping cart
 * Product reviews and ratings
